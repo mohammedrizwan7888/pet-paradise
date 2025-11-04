@@ -1,0 +1,388 @@
+.pet-detail-page {
+  padding: 2rem 0;
+  min-height: 80vh;
+}
+
+.pet-detail-loading {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 2px solid #e9ecef;
+  color: #7f8c8d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.pet-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* Image Gallery */
+.pet-images-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #e74c3c;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pet Information */
+.pet-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pet-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  flex: 1;
+}
+
+.pet-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.pet-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.meta-item i {
+  color: #e74c3c;
+}
+
+.pet-description,
+.pet-health-info,
+.vaccination-details,
+.pet-features,
+.seller-info {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.pet-description h2,
+.pet-health-info h2,
+.vaccination-details h2,
+.pet-features h2,
+.seller-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.pet-description p {
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.health-item {
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  color: #555;
+}
+
+.health-item.guarantee {
+  grid-column: 1 / -1;
+  background: #d4edda;
+  color: #155724;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.vaccination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vaccination-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
+}
+
+.vacc-label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.vacc-status {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  color: #555;
+}
+
+.feature-item i {
+  color: #27ae60;
+}
+
+.seller-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+}
+
+.seller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.seller-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #d4edda;
+  color: #155724;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.seller-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #f39c12;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.seller-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.seller-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #555;
+  margin: 0;
+}
+
+.seller-details i {
+  color: #e74c3c;
+  width: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+}
+
+.btn-secondary:hover {
+  background: #e74c3c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 1.25rem 2rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 968px) {
+  .pet-detail-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pet-images-section {
+    position: relative;
+    top: 0;
+  }
+
+  .main-image img {
+    height: 400px;
+  }
+
+  .health-grid,
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .pet-header {
+    flex-direction: column;
+  }
+
+  .pet-header h1 {
+    font-size: 2rem;
+  }
+
+  .pet-price {
+    font-size: 1.5rem;
+  }
+
+  .thumbnail-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
